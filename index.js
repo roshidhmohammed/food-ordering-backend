@@ -4,7 +4,12 @@ const cors = require("cors");
 const restaurants = require("./routes/restaurants");
 const groceries = require("./routes/groceries");
 
-app.use(cors());
+app.use( cors({
+  // origin: "https://mohammed-roshidh.vercel.app",
+  origin:process.env.API_URL,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 
 app.use(express.json());
 
