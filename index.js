@@ -5,8 +5,8 @@ const restaurants = require("./routes/restaurants");
 const groceries = require("./routes/groceries");
 
 app.use( cors({
-  // origin: "https://mohammed-roshidh.vercel.app",
-  origin:process.env.API_URL,
+  origin: "https://food-ordering-frontend-weld.vercel.app/",
+  // origin:process.env.API_URL,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
